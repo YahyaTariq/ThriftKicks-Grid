@@ -1,0 +1,375 @@
+/* general styling */
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #f0ead6;
+}
+
+header {
+  background-color: #000;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+}
+
+header nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  padding: 10px;
+  list-style: none;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+nav ul li a:hover {
+  border: 2px solid white;
+  border-radius: 5%;
+  padding: 10px;
+  box-shadow: 1px 5px 10px white;
+}
+
+nav ul img {
+  width: 100px;
+}
+
+nav a img:hover {
+  border: 2px solid white;
+  cursor: pointer;
+  transform: scaleX(1.3);
+  transition: all 0.4s ease-in-out;
+}
+
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Homepage styling */
+#home {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.border {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.left {
+  grid-column: 1;
+}
+
+.left p {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 300;
+}
+
+.right {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  margin-left: 90px;
+}
+.right h2 {
+  text-align: center;
+}
+.right a {
+  text-align: center;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in;
+}
+
+.right a:hover {
+  background-color: #444;
+}
+
+.right .shoe-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.shoe-item img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid grey;
+  border-radius: 10%;
+}
+
+.shoe-item img:hover {
+  transform: translateY(10px);
+  transform: scale(1.02);
+  box-shadow: 1px 1px 1px black;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.shoe-item p {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.back-to-top {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+/* Product styling */
+h1 {
+  text-align: center;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item:hover {
+  transform: translateY(-20px);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.product-item img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+.product-item h2 {
+  margin-top: 15px;
+}
+
+.product-item p {
+  margin: 5px 0;
+  font-family: "Sarabun", sans-serif;
+}
+
+/* about styling */
+.about-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  padding: 20px;
+}
+
+.about-info {
+  grid-column: 1;
+  font-family: "Sarabun", sans-serif;
+}
+
+.about-info p {
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.about-image {
+  grid-column: 2;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* contact styling */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Form styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: "Sarabun", sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.contact-form button {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+  background-color: #444;
+}
+
+/* footer styling */
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-column {
+  text-align: center;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-column img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  /* Adjust header nav */
+  header nav {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  nav ul a {
+    margin-left: 0;
+  }
+
+  /* Adjust homepage layout */
+  #home {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    grid-column: 1;
+    margin: 10px 0;
+  }
+
+  .right a {
+    width: 100%;
+  }
+
+  /* Product page adjustments */
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* About page layout adjustment */
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-info,
+  .about-image {
+    grid-column: 1;
+    margin: 10px 0;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+  /* Contact form adjustment */
+  .contact-form {
+    width: 100%;
+  }
+
+  /* Footer adjustments */
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-column {
+    margin-bottom: 10px;
+  }
+
+  .footer-column img {
+    width: 25px;
+  }
+}
